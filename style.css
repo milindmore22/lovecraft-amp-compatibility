@@ -1,0 +1,36 @@
+.mobile-menu.expanded,
+.mobile-search.expanded {
+	display: block;
+}
+
+/* Remove the down arrow that was part of the link */
+.main-menu > .menu-item-has-children > a::after {
+	display: none;
+}
+
+/* And instead put it as part of the list item so that it can be tapped  */
+.main-menu > .menu-item-has-children::after {
+	content: "";
+	display: block;
+	border: 5px solid transparent;
+	border-top-color: #ca2017;
+	position: absolute;
+	z-index: 1001;
+	right: 0;
+	top: 50%;
+	margin-top: -2px;
+}
+
+.main-menu > li:focus-within > ul {
+	opacity: 1;
+	left: 50%;
+	margin-left: -120px;
+	top: 47px;
+}
+
+.main-menu li > ul > li:focus-within > ul {
+	opacity: 1;
+	top: 0;
+	left: 240px;
+	margin-left: 0;
+}
